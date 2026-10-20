@@ -1,17 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#10131c" />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <title>Project</title>
+        <title>Theme Toggle — Motion Lab</title>
     </head>
 
     <body>
-        <div class="center">
-            <input type="checkbox" />
-        </div>
+        <main class="scene">
+            <div class="ambient ambient--one"></div>
+            <div class="ambient ambient--two"></div>
+
+            <section class="theme-card">
+                <div class="card-top">
+                    <span class="eyebrow">INTERFACE / #470</span>
+                    <span class="live-dot"></span>
+                </div>
+
+                <div class="preview">
+                    <div class="preview-orbit orbit--one"></div>
+                    <div class="preview-orbit orbit--two"></div>
+
+                    <div class="preview-icon">
+                        <svg class="sun-icon" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="17" />
+                            <g stroke-linecap="round">
+                                <path
+                                    d="M50 8v12 M50 80v12 M8 50h12 M80 50h12"
+                                />
+                                <path
+                                    d="m20.3 20.3 8.5 8.5 M71.2 71.2l8.5 8.5"
+                                />
+                                <path
+                                    d="m79.7 20.3-8.5 8.5 M28.8 71.2l-8.5 8.5"
+                                />
+                            </g>
+                        </svg>
+
+                        <svg class="moon-icon" viewBox="0 0 100 100">
+                            <path
+                                d="M72 65A35 35 0 0 1 35 28a35 35 0 1 0 37 37Z"
+                            />
+                            <path class="moon-star" d="M70 20v12 M64 26h12" />
+                            <circle class="moon-star" cx="80" cy="43" r="2" />
+                        </svg>
+                    </div>
+
+                    <div class="stars" aria-hidden="true">
+                        <span>✦</span>
+                        <span>·</span>
+                        <span>✧</span>
+                        <span>·</span>
+                    </div>
+                </div>
+
+                <div class="theme-info">
+                    <span class="eyebrow">YOUR ENVIRONMENT</span>
+                    <h1 class="theme-title">Dark <span>mode.</span></h1>
+                    <p class="theme-description">
+                        A little less light. A little more focus.
+                    </p>
+                </div>
+
+                <label class="toggle" for="theme-toggle">
+                    <input
+                        type="checkbox"
+                        id="theme-toggle"
+                        aria-label="Switch between dark and light themes"
+                    />
+
+                    <span class="toggle-track">
+                        <span class="track-glow"></span>
+
+                        <span class="track-label track-label--dark">DARK</span>
+                        <span class="track-label track-label--light"
+                            >LIGHT</span
+                        >
+
+                        <span class="toggle-thumb">
+                            <svg class="thumb-moon" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 15.3A8 8 0 0 1 8.7 5a8 8 0 1 0 10.3 10.3Z"
+                                />
+                            </svg>
+
+                            <svg class="thumb-sun" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2 M12 20v2 M4.93 4.93l1.42 1.42 M17.65 17.65l1.42 1.42 M2 12h2 M20 12h2 M4.93 19.07l1.42-1.42 M17.65 6.35l1.42-1.42"
+                                />
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+
+                <div class="card-bottom">
+                    <span class="status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">SYSTEM ONLINE</span>
+                    </span>
+
+                    <span class="theme-code">THM—<span>01</span></span>
+                </div>
+            </section>
+
+            <div class="scene-caption">
+                <span>DESIGNED FOR YOUR EYES</span>
+                <span>DAY / NIGHT</span>
+            </div>
+        </main>
 
         <script src="./assets/js/main.js"></script>
     </body>
